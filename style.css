@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary Color */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral Color */
+    --dark-gray: hsl(0, 0%, 59%);
+    --white: #fff;
+
+    /* Font Size */
+    --default-font-size: 18px;
+
+    /* Font Family */
+    --font-family: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background: url(images/bg-pattern-top.svg) no-repeat -45% 200%,
+        url(images/bg-pattern-bottom.svg) no-repeat 135% -132%;
+    background-color: var(--dark-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: var(--default-font-size);
+}
+
+.card {
+    max-width: 350px;
+    min-width: 250px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.card-header img {
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.profile-name {
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.profile-img {
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: 22%;
+    border: 5px solid var(--white);
+}
+
+.heading-4 {
+    color: var(--dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.heading-4 span {
+    margin-left: .35rem;
+}
+
+.text-grey {
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+.social-count p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.social-count small {
+    color: var(--dark-gray);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.attribution {
+    font-size: 13px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        background: url(images/bg-pattern-top.svg) no-repeat 117% 172%,
+        url(images/bg-pattern-bottom.svg) no-repeat 0% -132%;
+        background-color: var(--dark-cyan);
+    }
+}
